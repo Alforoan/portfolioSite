@@ -22,7 +22,7 @@ function Navbar() {
           <a
             target="_blank"
             rel="noopener nonreferrer"
-            href="https://www.google.com"
+            href="https://www.twitter.com"
           >
             <i class="fa-brands fa-twitter"></i>
           </a>
@@ -36,7 +36,8 @@ const Wrapper = styled.div`
   font-size: 2rem;
   display: flex;
   width: 100vw;
-
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   .nav-center {
     max-width: 1100px;
