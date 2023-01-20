@@ -3,9 +3,9 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <section>
+    <React.Fragment>
       <Navbar />
-    </section>
+    </React.Fragment>
   );
 }
 
