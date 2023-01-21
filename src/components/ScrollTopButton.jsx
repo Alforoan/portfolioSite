@@ -3,15 +3,41 @@ import { Link } from "react-scroll";
 import styled from "styled-components";
 
 function ScrollTopButton() {
-  const [invisible, setInvisible] = React.useState(false);
+  const [visible, setVisible] = React.useState(false);
+
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 0) {
+  //       setVisible(true);
+  //     } else {
+  //       setVisible(false);
+  //     }
+  //   };
+
+  React.useEffect(() => {
+    window.removeEventListener("scroll", event);
+    window.addEventListener("scroll", event, { passive: true });
+    return () => window.removeEventListener("scroll", event);
+  }, []);
+
+  const event = () => {
+    if (window.scrollY === 0) {
+      setVisible(false);
+    } else if (window.scrollY > 200) {
+      setVisible(true);
+    }
+  };
 
   return (
     <Wrapper>
-      <button type="button" className="scroll-top-button">
-        <Link to="navbar" smooth={true} duration={500}>
-          Top
-        </Link>
-      </button>
+      {visible ? (
+        <button onScroll={event} type="button" className="scroll-top-button">
+          <Link to="navbar" smooth={true} duration={500}>
+            <i class="fa-sharp fa-solid fa-angle-up"></i>
+          </Link>
+        </button>
+      ) : (
+        ""
+      )}
     </Wrapper>
   );
 }

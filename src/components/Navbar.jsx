@@ -66,6 +66,7 @@ const Wrapper = styled.div`
   .page-link-list {
     display: flex;
     list-style: none;
+    cursor: pointer;
   }
   .page-link-list a {
     text-decoration: none;
@@ -77,6 +78,10 @@ const Wrapper = styled.div`
     border: none;
     font-size: 2rem;
     cursor: pointer;
+    color: blue;
+  }
+  .twitter-icon a:visited {
+    color: #1da1f2;
   }
   .projects {
     padding-right: 1rem;
