@@ -5,14 +5,6 @@ import styled from "styled-components";
 function ScrollTopButton() {
   const [visible, setVisible] = React.useState(false);
 
-  //   const handleScroll = () => {
-  //     if (window.scrollY > 0) {
-  //       setVisible(true);
-  //     } else {
-  //       setVisible(false);
-  //     }
-  //   };
-
   React.useEffect(() => {
     window.removeEventListener("scroll", event);
     window.addEventListener("scroll", event, { passive: true });

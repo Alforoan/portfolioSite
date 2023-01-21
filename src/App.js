@@ -8,22 +8,6 @@ import ScrollTopButton from "./components/ScrollTopButton";
 function App() {
   const [visible, setVisible] = React.useState(false);
 
-  // const event = () => {
-  //   if (window.scrollY === 0) {
-  //     setVisible(false);
-  //   } else {
-  //     setVisible(true);
-  //   }
-  //   console.log(window.scrollY);
-  // };
-  // const handleScroll = () => {
-  //   if (window.scrollY > 0) {
-  //     setVisible(true);
-  //   } else {
-  //     setVisible(false);
-  //   }
-  // };
-
   return (
     <React.Fragment>
       <Navbar />
