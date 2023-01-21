@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 function Navbar() {
   return (
@@ -9,13 +10,19 @@ function Navbar() {
 
         <ul className="page-link-list">
           <li className="home">
-            <a href="/">Home</a>
+            <Link to="home" smooth={true}>
+              Home
+            </Link>
           </li>
           <li>
-            <a href="/about">About</a>
+            <Link to="about" smooth={true}>
+              About
+            </Link>
           </li>
           <li className="projects">
-            <a href="/projects">Projects</a>
+            <Link to="projects" smooth={true}>
+              Projects
+            </Link>
           </li>
         </ul>
         <button className="twitter-icon">
