@@ -3,18 +3,23 @@ import styled from "styled-components";
 
 import { Link } from "react-scroll";
 
+const info =
+  " I am an aspiring software engineer with a passion for both technology and problem-solving. In my free time, I enjoy pushing myself both physically and mentally through rock climbing and testing my creativity through playing the guitar. I am constantly seeking new challenges and opportunities to grow as both an engineer and an individual.";
+
 function Homepage() {
+  const [readMore, setReadMore] = React.useState(false);
   return (
     <Wrapper id="home" className="homepage">
       <main>
         <h2 className="welcome">WELCOME TO MY PAGE</h2>
         <p className="description">
-          I am an aspiring software engineer with a passion for both technology
-          and problem-solving. In my free time, I enjoy pushing myself both
-          physically and mentally through rock climbing and testing my
-          creativity through playing the guitar. I am constantly seeking new
-          challenges and opportunities to grow as both an engineer and an
-          individual.
+          {readMore ? info : `${info.substring(0, 50)}...`}
+          <button
+            onClick={() => setReadMore((prev) => !prev)}
+            className="read-more-btn"
+          >
+            {!readMore ? "Read More" : "Read Less"}
+          </button>
         </p>
         <button type="button" className="projects-button">
           <Link to="projects" duration={700} smooth={true}>
@@ -33,6 +38,19 @@ const Wrapper = styled.div`
   color: white;
   text-align: center;
   align-items: center;
+
+  .read-more-btn {
+    border: transparent;
+    background: white;
+    border-radius: 3px;
+    padding: 0.3rem 0.2rem 0.3rem 0.2rem;
+    font-size: 0.8rem;
+    margin-left: 0.3rem;
+    color: #0047ab;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
   .background-image {
     opacity: 0.5;
     width: 100vw;
@@ -49,6 +67,8 @@ const Wrapper = styled.div`
     font-size: 1.2rem;
     font-weight: lighter;
     text-align: justify;
+
+    align-items: center;
   }
   .projects-button {
     font-size: 2rem;
