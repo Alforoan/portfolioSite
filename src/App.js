@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Homepage from "./components/Homepage";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import ScrollTopButton from "./components/ScrollTopButton";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Homepage />
       <About />
       <Projects />
+      <ScrollTopButton />
     </React.Fragment>
   );
 }
