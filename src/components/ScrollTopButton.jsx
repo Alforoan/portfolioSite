@@ -54,6 +54,11 @@ const Wrapper = styled.div`
     text-align: center;
     vertical-align: middle;
   }
+  .scroll-top-button-link:hover {
+    transition: all 0.3s linear;
+    border: 2px solid blue;
+    background: transparent;
+  }
 `;
 
 export default ScrollTopButton;
