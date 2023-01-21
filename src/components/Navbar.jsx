@@ -25,7 +25,7 @@ function Navbar() {
             </Link>
           </li>
         </ul>
-        <button className="twitter-icon">
+        <button type="button" className="twitter-icon">
           <a
             target="_blank"
             rel="noopener nonreferrer"

@@ -22,11 +22,16 @@ function ScrollTopButton() {
   return (
     <Wrapper>
       {visible ? (
-        <button onScroll={event} type="button" className="scroll-top-button">
-          <Link to="navbar" smooth={true} duration={500}>
-            <i class="fa-sharp fa-solid fa-angle-up"></i>
-          </Link>
-        </button>
+        <Link
+          onScroll={event}
+          type="button"
+          className="scroll-top-button-link"
+          to="navbar"
+          smooth={true}
+          duration={500}
+        >
+          <i class="fa-sharp fa-solid fa-angle-up"></i>
+        </Link>
       ) : (
         ""
       )}
@@ -35,8 +40,8 @@ function ScrollTopButton() {
 }
 
 const Wrapper = styled.div`
-  .scroll-top-button {
-    font-size: 1.5rem;
+  .scroll-top-button-link {
+    font-size: 2rem;
     position: fixed;
     bottom: 10%;
     right: 20%;
@@ -46,6 +51,8 @@ const Wrapper = styled.div`
     background: lightgray;
     border-radius: 50%;
     cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
   }
 `;
 

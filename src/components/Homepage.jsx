@@ -9,13 +9,16 @@ function Homepage() {
       <main>
         <h2 className="welcome">WELCOME TO MY PAGE</h2>
         <p className="description">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium
-          dolorum odit minima harum recusandae eveniet soluta consequuntur quo
-          eligendi omnis!
+          I am an aspiring software engineer with a passion for both technology
+          and problem-solving. In my free time, I enjoy pushing myself both
+          physically and mentally through rock climbing and testing my
+          creativity through playing the guitar. I am constantly seeking new
+          challenges and opportunities to grow as both an engineer and an
+          individual.
         </p>
-        <button className="projects-button">
+        <button type="button" className="projects-button">
           <Link to="projects" duration={700} smooth={true}>
-            CHECK OUT PROJECTS
+            CHECK OUT MY PROJECTS
           </Link>
         </button>
       </main>
@@ -43,6 +46,9 @@ const Wrapper = styled.div`
     max-width: 40vw;
     margin: auto;
     margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    text-align: justify;
   }
   .projects-button {
     font-size: 2rem;
