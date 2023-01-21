@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 
 function Navbar() {
   return (
-    <Wrapper>
+    <Wrapper id="navbar">
       <main className="nav-center">
         <h1 className="alforoan">Alforoan</h1>
 

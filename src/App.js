@@ -11,9 +11,9 @@ function App() {
       <Navbar />
 
       <Homepage />
+      <ScrollTopButton />
       <About />
       <Projects />
-      <ScrollTopButton />
     </React.Fragment>
   );
 }
