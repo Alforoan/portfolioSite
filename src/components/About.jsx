@@ -8,20 +8,36 @@ import javascript from "../images/javascript.png";
 import react from "../images/react.png";
 import python from "../images/python.png";
 
+const htmlInfo =
+  "Above are the programming languages I am quite familiar with. With python as my primary language, I learned the others to start building websites and you can scroll down to check out some of my work.";
+
 function About() {
+  const [info, setInfo] = React.useState(false);
+
   return (
     <Wrapper id="about">
-      <h2>
+      <h2 className="about">
         ABOUT <span className="me">ME</span>
       </h2>
-      <div>
-        <img src={html} alt="html" />
-        <img src={css} alt="css" />
-        <img src={javascript} alt="js" />
-        <img src={react} alt="react" />
-        <img src={python} alt="python" />
-        <h3>Hobbies</h3>
-      </div>
+      <main>
+        <div className="html-css-container">
+          <div
+            className="icon-container"
+            onMouseEnter={() => setInfo((prev) => !prev)}
+            onMouseLeave={() => setInfo(false)}
+          >
+            <img className="img html-and-css" src={html} alt="html" />
+            <img className="img html-and-css" src={css} alt="html" />
+            <img className="img javascript" src={javascript} alt="js" />
+            <img className="img react" src={react} alt="react" />
+            <img className="img python" src={python} alt="python" />
+          </div>
+
+          <div>
+            <p className="html-info">{htmlInfo}</p>
+          </div>
+        </div>
+      </main>
     </Wrapper>
   );
 }
@@ -29,8 +45,39 @@ function About() {
 const Wrapper = styled.div`
   font-size: 1.5rem;
   text-align: center;
+  .about {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
   .me {
     color: green;
+  }
+  .icon-container {
+    cursor: pointer;
+    margin-bottom: 3rem;
+  }
+  .img {
+    height: 200px;
+    width: 250px;
+  }
+
+  .javascript {
+    width: 230px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .html-info {
+    max-width: 800px;
+    font-size: 1.3rem;
+    text-align: justify;
+    margin: auto;
+  }
+  .html-css-container {
+    diplay: flex;
+
+    flex-direction: column;
+    align-items: center;
   }
 `;
 

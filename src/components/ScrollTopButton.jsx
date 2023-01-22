@@ -44,7 +44,7 @@ const Wrapper = styled.div`
     font-size: 2rem;
     position: fixed;
     bottom: 10%;
-    right: 20%;
+    right: 10%;
     border: transparent;
     width: 3rem;
     height: 3rem;
