@@ -1,14 +1,17 @@
 import React from "react";
-import background from "../images/background.png";
+
+import projects from "./ProjectsData";
+import Project from "./Project";
 
 function Projects() {
   return (
-    <div id="projects">
-      <h1>
-        MY <span>PROJECTS</span>
-      </h1>
-      <img src={background} alt="stuff" />
-    </div>
+    <section id="projects">
+      <div>
+        {projects.map((project) => {
+          return <Project {...project} key={project.id} />;
+        })}
+      </div>
+    </section>
   );
 }
 
