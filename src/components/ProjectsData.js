@@ -10,7 +10,7 @@ const projects = [
   },
   {
     id: 2,
-    name: "Valorant App",
+    name: "GameInfo App",
     url: "https://alforoan-valorantapp.netlify.app/",
     imgURL: valimg,
   },
