@@ -6,13 +6,13 @@ const projects = [
     id: 1,
     name: "To-Do-App",
     url: "https://alforoan-todoapp.netlify.app/",
-    imgURL: { todoimg },
+    imgURL: todoimg,
   },
   {
     id: 2,
     name: "Valorant App",
     url: "https://alforoan-valorantapp.netlify.app/",
-    imgURL: { valimg },
+    imgURL: valimg,
   },
 ];
 

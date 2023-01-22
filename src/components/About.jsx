@@ -9,7 +9,7 @@ import react from "../images/react.png";
 import python from "../images/python.png";
 
 const htmlInfo =
-  "Above are the programming languages I am quite familiar with. With python as my primary language, I learned the others to start building websites and you can scroll down to check out some of my work.";
+  "Above are the programming languages I am quite familiar with. Learning python made it easier to learn Javascript and I learned the others to start building websites. You can scroll down to check out some of my work.";
 
 function About() {
   const [info, setInfo] = React.useState(false);

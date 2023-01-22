@@ -3,8 +3,7 @@ import styled from "styled-components";
 
 function Project({ id, name, url, imgURL }) {
   return (
-    <article>
-      <h1>MY PROJECTS</h1>
+    <Wrapper>
       <h4>{name}</h4>
       <a target="_blank" href={url}>
         {name}
@@ -12,8 +11,16 @@ function Project({ id, name, url, imgURL }) {
       <div>
         <img src={imgURL} alt="picture" />
       </div>
-    </article>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  img {
+    width: 450px;
+    height: 300px;
+    opacity: 0.5;
+  }
+`;
 
 export default Project;
